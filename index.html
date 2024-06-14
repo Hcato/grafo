@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metro</title>
+    <title>Estaciones de Metro</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -11,22 +11,28 @@
         <h1>Estaciones de metro</h1>
         
         <div class="section">
-            <h2>Añadir una estacion (vertice)</h2>
-            <input type="text" id="stationInput" placeholder="Enter station name">
+            <h2>Añadir una estación (vértice)</h2>
+            <input type="text" id="stationInput" placeholder="Ingrese el nombre de la estación">
             <button onclick="addStation()">Añadir</button>
         </div>
         
         <div class="section">
             <h2>Conexiones entre estaciones</h2>
-            <input type="text" id="startStationInput" placeholder="indique que estacion quiere agregarle una conexion">
-            <input type="text" id="endStationInput" placeholder="indique la estacion que estara conectada a la de arriba">
+            <input type="text" id="startStationInput" placeholder="Estación de inicio">
+            <input type="text" id="endStationInput" placeholder="Estación de destino">
             <button onclick="addconex()">Conectar</button>
         </div>
         
         <div class="section">
-            <h2>Recorrido</h2>
-            <input type="text" id="dfsInput" placeholder="indique de donde quiere empezar">
-            <button onclick="perform()">iniciar </button>
+            <h2>Recorrido DFS</h2>
+            <input type="text" id="dfsInput" placeholder="Inicio del recorrido DFS">
+            <button onclick="performDFS()">Iniciar DFS</button>
+        </div>
+
+        <div class="section">
+            <h2>Recorrido BFS</h2>
+            <input type="text" id="bfsInput" placeholder="Inicio del recorrido BFS">
+            <button onclick="performBFS()">Iniciar BFS</button>
         </div>
         
         <div class="output">

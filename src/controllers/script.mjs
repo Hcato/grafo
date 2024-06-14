@@ -21,17 +21,29 @@ window.addconex = () => {
         grafo.addEdge(startStation, endStation);
         startStationInput.value = '';
         endStationInput.value = '';
-        displayOutput(`Conexion creada ${startStation} to ${endStation}`);
+        displayOutput(`Conexión creada: ${startStation} -> ${endStation}`);
     }
 };
 
-window.perform = () => {
+window.performDFS = () => {
     const dfsInput = document.getElementById('dfsInput');
     const startStation = dfsInput.value.trim();
     if (startStation) {
-        const result = grafo.recorrido(startStation);
+        const result = [];
+        grafo.dfs((vertex) => result.push(vertex));
         dfsInput.value = '';
-        displayOutput(`empieza desde: ${startStation}: ${result.join(' -> ')}`);
+        displayOutput(`Recorrido DFS desde ${startStation}: ${result.join(' -> ')}`);
+    }
+};
+
+window.performBFS = () => {
+    const bfsInput = document.getElementById('bfsInput');
+    const startStation = bfsInput.value.trim();
+    if (startStation) {
+        const result = [];
+        grafo.bfs((vertex) => result.push(vertex));
+        bfsInput.value = '';
+        displayOutput(`Recorrido BFS desde ${startStation}: ${result.join(' -> ')}`);
     }
 };
 

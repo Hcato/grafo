@@ -1,4 +1,4 @@
-import LinkedList from './LinkedList.mjs';
+import LinkedList from '../modules/linkedlist.mjs';
 
 export default class Metro {
     #value;
